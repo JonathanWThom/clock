@@ -1,24 +1,22 @@
-# README
+# Clock
+### By Jonathan Thom
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It's a clock! I was going to try to use rails for it, but then I remembered that's what we have JS for.
 
-Things you may want to cover:
+## What's Next
 
-* Ruby version
+I'll make use of Rails perhaps, by adding some click options or new pages you can visit.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Installation
+```
+git clone https://github.com/JonathanWThom/clock
+cd clock
+bundle install
+rake db:create
+rake db:migrate db:test:prepare
+rails s
+```
+* _Then, in any modern browser, navigate to:_
+```
+localhost:3000
+```
