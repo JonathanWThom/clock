@@ -1,1 +1,14 @@
-<span id="hours"></span> : <span id="minutes"></span> : <span id="seconds"></span>
+<span id="hours"></span> :
+<% if Time.now.min < 10 %>
+  0<span id="minutes"></span> :
+<% else %>
+  <span id="minutes"></span> :
+<% end %>
+
+<span id="seconds"></span>
+
+<% if Time.now.hour > 12 %>
+  PM
+<% else %>
+  AM
+<% end %>
