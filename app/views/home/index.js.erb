@@ -1,0 +1,11 @@
+
+  window.setInterval(function(){
+    alert('works');
+    newTime();
+  }, 1000);
+
+
+
+function newTime() {
+  $('#time').html('<%= @time %>');
+}
