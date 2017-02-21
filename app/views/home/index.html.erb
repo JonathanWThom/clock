@@ -1,17 +1,24 @@
 <div class="clock">
-  <span id="hours"></span> :
-  <% if Time.now.min < 10 %>
-    0<span id="minutes"></span> :
+  <% if Time.now.hour > 12 %>
+    <span id="hours"><%= Time.now.hour - 12 %></span> :
   <% else %>
-    <span id="minutes"></span> :
+    <span id="hours"><%= Time.now.hour %></span> :
+  <% end %>
+  <% if Time.now.min < 10 %>
+    0<span id="minutes"><%= Time.now.min %></span> :
+  <% else %>
+    <span id="minutes"><%= Time.now.min %></span> :
   <% end %>
 
-  <span id="seconds"></span>
+  <span id="seconds"><%= Time.now.sec %></span>
 
   <% if Time.now.hour > 12 %>
     PM
   <% else %>
     AM
   <% end %>
+</div>
 
+<div class="date">
+  <!-- add date on hover -->
 </div>
