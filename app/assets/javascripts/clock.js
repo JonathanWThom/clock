@@ -4,8 +4,13 @@ $(document).ready(function(){
     if (hours > 12) {
       hours -= 12
     }
+
+    var seconds = new Date().getSeconds();
+    if (seconds < 10) {
+      seconds = "0" + seconds
+    }
     $('#hours').text(hours);
     $('#minutes').text(new Date().getMinutes());
-    $('#seconds').text(new Date().getSeconds());
+    $('#seconds').text(seconds);
   }, 1000);
 });

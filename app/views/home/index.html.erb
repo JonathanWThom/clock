@@ -9,7 +9,6 @@
   <% else %>
     <span id="minutes"><%= Time.now.min %></span> :
   <% end %>
-
   <span id="seconds"><%= Time.now.sec %></span>
 
   <% if Time.now.hour > 12 %>
@@ -17,8 +16,4 @@
   <% else %>
     AM
   <% end %>
-</div>
-
-<div class="date">
-  <!-- add date on hover -->
 </div>
