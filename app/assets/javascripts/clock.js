@@ -5,12 +5,18 @@ $(document).ready(function(){
       hours -= 12
     }
 
+    var minutes = new Date().getMinutes();
+    if (minutes < 10) {
+      minutes = "0" + minutes
+    }
+
     var seconds = new Date().getSeconds();
     if (seconds < 10) {
       seconds = "0" + seconds
     }
+
     $('#hours').text(hours);
-    $('#minutes').text(new Date().getMinutes());
+    $('#minutes').text(minutes);
     $('#seconds').text(seconds);
   }, 1000);
 });
